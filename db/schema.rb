@@ -15,12 +15,14 @@ ActiveRecord::Schema.define(version: 8) do
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.integer "show_id"
   end
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.integer "show_id"
-    t.string "catchphrase"
+    t.integer "actor_id"
+    t.text "catchphrase"
   end
 
   create_table "networks", force: :cascade do |t|
